@@ -1,0 +1,827 @@
+---
+import '../styles/global.css';
+import { Icon } from 'astro-icon/components';
+---
+
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Автошкола Саваков — Русе. Шофьорски курсове за категории A, B, C, D. Запиши се онлайн.">
+  <meta property="og:title" content="Автошкола Саваков | Русе">
+  <meta property="og:description" content="Шофирай с увереност. Запиши се онлайн.">
+  <title>Автошкола Саваков — Русе | Шофьорски курсове</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- ============================================================
+       SECTION 0 — TOP INFO BAR
+  ============================================================ -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar__inner">
+        <div class="topbar__left">
+          <div class="topbar__addresses">
+            <span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              бул. „Цар Освободител" 31, офис 1, Русе
+            </span>
+          </div>
+        </div>
+        <div class="topbar__right">
+          <a href="tel:+359887572659">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.17 3.26 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+            0887 572 659
+          </a>
+          <span class="topbar__sep">|</span>
+          <a href="#" aria-label="Facebook" class="topbar__icon-link">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       SECTION 1 — STICKY NAVIGATION
+  ============================================================ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="container">
+      <div class="navbar__inner">
+        <a href="#hero" class="navbar__logo" aria-label="Начало">АВТОШКОЛА <span>Саваков</span></a>
+
+        <nav class="navbar__nav" aria-label="Главна навигация">
+          <a href="#hero">Начало</a>
+          <a href="#categories">Курсове</a>
+
+          <div class="nav-dropdown">
+            <div class="nav-dropdown__trigger" tabindex="0" role="button" aria-haspopup="true">
+              Категории <span class="caret">▾</span>
+            </div>
+            <div class="nav-dropdown__menu" role="menu">
+              <a href="#categories" role="menuitem">Кат. А / А1 / А2 — Мотоциклети</a>
+              <a href="#categories" role="menuitem">Кат. B — Леки автомобили</a>
+              <a href="#categories" role="menuitem">Кат. B78 — Автоматик</a>
+              <a href="#categories" role="menuitem">Кат. BE — С ремарке</a>
+              <a href="#categories" role="menuitem">Кат. C — Товарни автомобили</a>
+              <a href="#categories" role="menuitem">Кат. CE — Товарен с ремарке</a>
+              <a href="#categories" role="menuitem">Кат. D — Автобуси</a>
+              <a href="#categories" role="menuitem">Кат. D1 — Микробуси</a>
+            </div>
+          </div>
+
+          <div class="nav-dropdown">
+            <div class="nav-dropdown__trigger" tabindex="0" role="button" aria-haspopup="true">
+              Услуги <span class="caret">▾</span>
+            </div>
+            <div class="nav-dropdown__menu" role="menu">
+              <a href="#services" role="menuitem">Проф. компетентност</a>
+              <a href="#services" role="menuitem">Възстановяване на точки</a>
+              <a href="#services" role="menuitem">Опреснителни часове</a>
+              <a href="#services" role="menuitem">АДР — Опасни товари</a>
+              <a href="#services" role="menuitem">Мотокари / ПСМ</a>
+            </div>
+          </div>
+
+          <a href="#why">За нас</a>
+          <a href="#contact">Контакти</a>
+        </nav>
+
+        <div class="navbar__cta">
+          <a href="#contact" class="btn btn-primary">ЗАПИШИ СЕ</a>
+        </div>
+
+        <button class="navbar__hamburger" id="hamburger" aria-label="Меню" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile drawer -->
+  <div class="mobile-menu" id="mobileMenu" aria-label="Мобилна навигация">
+    <a href="#hero" class="mobile-nav-link">Начало</a>
+    <a href="#categories" class="mobile-nav-link">Курсове</a>
+
+    <div class="mobile-group-title">Категории</div>
+    <div class="mobile-sub">
+      <a href="#categories" class="mobile-nav-link">Кат. А / А1 / А2</a>
+      <a href="#categories" class="mobile-nav-link">Кат. B</a>
+      <a href="#categories" class="mobile-nav-link">Кат. B78 — Автоматик</a>
+      <a href="#categories" class="mobile-nav-link">Кат. BE</a>
+      <a href="#categories" class="mobile-nav-link">Кат. C</a>
+      <a href="#categories" class="mobile-nav-link">Кат. CE</a>
+      <a href="#categories" class="mobile-nav-link">Кат. D</a>
+      <a href="#categories" class="mobile-nav-link">Кат. D1</a>
+    </div>
+
+    <div class="mobile-group-title">Услуги</div>
+    <div class="mobile-sub">
+      <a href="#services" class="mobile-nav-link">Проф. компетентност</a>
+      <a href="#services" class="mobile-nav-link">Възстановяване на точки</a>
+      <a href="#services" class="mobile-nav-link">Опреснителни часове</a>
+      <a href="#services" class="mobile-nav-link">АДР</a>
+      <a href="#services" class="mobile-nav-link">Мотокари / ПСМ</a>
+    </div>
+
+    <a href="#why" class="mobile-nav-link">За нас</a>
+    <a href="#contact" class="mobile-nav-link">Контакти</a>
+    <div class="mobile-cta">
+      <a href="#contact" class="btn btn-primary mobile-nav-link">ЗАПИШИ СЕ ОНЛАЙН</a>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- ============================================================
+         SECTION 2 — HERO
+    ============================================================ -->
+    <section class="hero" id="hero" aria-label="Начало">
+      <div class="hero__glow"></div>
+      <div class="container">
+        <div class="hero__inner">
+          <div class="hero__content">
+            <div class="hero__badge"><Icon name="lucide:trophy" width="16" height="16" /> #1 Автошкола в Русе</div>
+            <h1 class="hero__h1">
+              Твоят път към<br>
+              <em>свободата</em><br>
+              започва тук.
+            </h1>
+            <p class="hero__subtitle">
+              Записвай се онлайн. Гъвкав график. Опитни инструктори. Всички категории.
+            </p>
+            <div class="hero__buttons">
+              <a href="#contact" class="btn btn-primary" style="font-size:16px;padding:16px 32px;">ЗАПИШИ СЕ ОНЛАЙН</a>
+              <a href="#categories" class="btn btn-outline" style="font-size:16px;padding:16px 32px;">Виж курсовете ↓</a>
+            </div>
+            <div class="hero__trust">
+              <span>
+                <span class="check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                Над 1000 успешни курсисти
+              </span>
+              <span>
+                <span class="check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                Лицензирана школа
+              </span>
+              <span>
+                <span class="check">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                Безплатна консултация
+              </span>
+            </div>
+          </div>
+
+          <div class="hero__image-wrap">
+            <!-- src and alt are set by scripts/config.ts + scripts/main.ts -->
+            <img class="hero__image" src="" alt="">
+            <div class="hero__image-accent"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll" aria-hidden="true">
+        <span>Разгледай</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7"/>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 3 — STATS
+    ============================================================ -->
+    <section class="stats" id="stats" aria-label="Статистики">
+      <div class="container">
+        <div class="stats__inner">
+          <div class="stats__item reveal">
+            <div class="stats__number" data-target="1000" data-suffix="+">0</div>
+            <div class="stats__label">Успешни курсисти</div>
+          </div>
+          <div class="stats__item reveal" style="transition-delay:0.1s">
+            <div class="stats__number" data-target="15" data-suffix="+">0</div>
+            <div class="stats__label">Години опит</div>
+          </div>
+          <div class="stats__item reveal" style="transition-delay:0.2s">
+            <div class="stats__number" data-target="98" data-suffix="%">0</div>
+            <div class="stats__label">Успеваемост</div>
+          </div>
+          <div class="stats__item reveal" style="transition-delay:0.3s">
+            <div class="stats__number" data-target="8" data-suffix="">0</div>
+            <div class="stats__label">Категории</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 4 — COURSE CATEGORIES
+    ============================================================ -->
+    <section class="categories" id="categories" aria-label="Категории">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Всички категории</h2>
+          <p class="section-subtitle">От мотоциклет до камион — обучаваме за всички видове превозни средства.</p>
+        </div>
+        <div class="categories__grid">
+
+          <div class="cat-card reveal" data-category="a">
+            <div class="cat-card__icon">
+              <Icon name="mdi:motorbike" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория А / А1 / А2</div>
+            <div class="cat-card__desc">Мотоциклети и мотопеди</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.1s" data-category="b">
+            <div class="cat-card__icon">
+              <Icon name="mdi:car" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория B</div>
+            <div class="cat-card__desc">Леки автомобили — ръчна скоростна кутия</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.15s" data-category="b78">
+            <div class="cat-card__icon">
+              <Icon name="mdi:car" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория B78</div>
+            <div class="cat-card__desc">Леки автомобили — автоматична скоростна кутия</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.2s" data-category="be">
+            <div class="cat-card__icon cat-card__icon--dual">
+              <Icon name="mdi:car" style="color:#FF5C1A" />
+              <span class="dual-sep"></span>
+              <Icon name="mdi:caravan" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория BE</div>
+            <div class="cat-card__desc">Лек автомобил с ремарке</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.25s" data-category="c">
+            <div class="cat-card__icon">
+              <Icon name="mdi:truck" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория C</div>
+            <div class="cat-card__desc">Товарни автомобили над 3.5т</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.3s" data-category="ce">
+            <div class="cat-card__icon cat-card__icon--dual">
+              <Icon name="mdi:truck" style="color:#FF5C1A" />
+              <span class="dual-sep"></span>
+              <Icon name="mdi:caravan" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория CE</div>
+            <div class="cat-card__desc">Товарен автомобил с ремарке</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.35s" data-category="d">
+            <div class="cat-card__icon">
+              <Icon name="mdi:bus" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория D</div>
+            <div class="cat-card__desc">Автобуси — превоз на пътници</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+          <div class="cat-card reveal" style="transition-delay:0.4s" data-category="d1">
+            <div class="cat-card__icon">
+              <Icon name="mdi:van-passenger" width="40" height="40" style="color:#FF5C1A" />
+            </div>
+            <div class="cat-card__title">Категория D1</div>
+            <div class="cat-card__desc">Микробуси до 16 места</div>
+            <button type="button" class="cat-card__link">
+              Детайли <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 5 — WHY CHOOSE US
+    ============================================================ -->
+    <section class="why" id="why" aria-label="Защо ние">
+      <div class="container">
+        <div class="why__inner">
+          <div class="why__left">
+            <div class="section-tag reveal-title">ЗАЩО НИЕ</div>
+            <h2 class="why__title reveal-title">Различни от<br>всички останали.</h2>
+            <p class="why__body reveal-title">
+              Ние не просто учим шофиране — изграждаме увереност зад волана. В нашата школа ще намерите търпеливи инструктори, модерни автомобили и гъвкав график, съобразен с вашия живот. Нашата цел е вие да излезете от изпита като уверен и отговорен шофьор.
+            </p>
+            <ul class="why__list">
+              <li class="reveal">
+                <div class="check"><Icon name="lucide:check" width="14" height="14" /></div>
+                <span>Индивидуален подход към всеки курсист</span>
+              </li>
+              <li class="reveal" style="transition-delay:0.1s">
+                <div class="check"><Icon name="lucide:check" width="14" height="14" /></div>
+                <span>Гъвкав график — уроци сутрин, обед и вечер</span>
+              </li>
+              <li class="reveal" style="transition-delay:0.15s">
+                <div class="check"><Icon name="lucide:check" width="14" height="14" /></div>
+                <span>Модерни и безопасни автомобили</span>
+              </li>
+              <li class="reveal" style="transition-delay:0.2s">
+                <div class="check"><Icon name="lucide:check" width="14" height="14" /></div>
+                <span>98% успеваемост на изпит от първи опит</span>
+              </li>
+              <li class="reveal" style="transition-delay:0.25s">
+                <div class="check"><Icon name="lucide:check" width="14" height="14" /></div>
+                <span>Онлайн записване и следене на напредъка</span>
+              </li>
+            </ul>
+          </div>
+          <div class="why__cards">
+            <div class="why-card reveal">
+              <div class="why-card__icon"><Icon name="lucide:calendar" width="28" height="28" /></div>
+              <div class="why-card__title">Гъвкав график</div>
+              <div class="why-card__desc">Записвай в удобен за теб ден и час — сутрин, обед или вечер.</div>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.1s">
+              <div class="why-card__icon"><Icon name="lucide:graduation-cap" width="28" height="28" /></div>
+              <div class="why-card__title">Опитни инструктори</div>
+              <div class="why-card__desc">Търпеливи, ясни и подкрепящи — при нас никой не е сам.</div>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.15s">
+              <div class="why-card__icon"><Icon name="lucide:car" width="28" height="28" /></div>
+              <div class="why-card__title">Модерни автомобили</div>
+              <div class="why-card__desc">Поддържан и безопасен автопарк с двойно управление.</div>
+            </div>
+            <div class="why-card reveal" style="transition-delay:0.2s">
+              <div class="why-card__icon"><Icon name="lucide:smartphone" width="28" height="28" /></div>
+              <div class="why-card__title">Онлайн записване</div>
+              <div class="why-card__desc">Запиши се за 2 минути от телефона — без опашки, без хартия.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 6 — SERVICES
+    ============================================================ -->
+    <section class="services" id="services" aria-label="Допълнителни услуги">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Допълнителни услуги</h2>
+          <p class="section-subtitle">Не само шофьорски курсове.</p>
+        </div>
+        <div class="services__grid">
+          <div class="svc-card reveal">
+            <div class="svc-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+            </div>
+            <div class="svc-card__title">Възстановяване на точки</div>
+            <div class="svc-card__desc">Курс за възстановяване на отнети контролни точки от СДВР.</div>
+            <a href="#contact" class="svc-card__link">→ Запитване</a>
+          </div>
+          <div class="svc-card reveal" style="transition-delay:0.1s">
+            <div class="svc-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><path d="M12 11h4"/><path d="M12 16h4"/><path d="M8 11h.01"/><path d="M8 16h.01"/></svg>
+            </div>
+            <div class="svc-card__title">Проф. компетентност</div>
+            <div class="svc-card__desc">Карта за квалификация (CPC) за шофьори на товарни и пътнически превозни средства.</div>
+            <a href="#contact" class="svc-card__link">→ Запитване</a>
+          </div>
+          <div class="svc-card reveal" style="transition-delay:0.15s">
+            <div class="svc-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <div class="svc-card__title">Опреснителни часове</div>
+            <div class="svc-card__desc">Индивидуални уроци за водачи, които искат да подновят уменията си.</div>
+            <a href="#contact" class="svc-card__link">→ Запитване</a>
+          </div>
+          <div class="svc-card reveal" style="transition-delay:0.2s">
+            <div class="svc-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4"/><path d="M12 17h.01"/></svg>
+            </div>
+            <div class="svc-card__title">АДР — Опасни товари</div>
+            <div class="svc-card__desc">Курс за превоз на опасни товари по шосе — начален и опреснителен.</div>
+            <a href="#contact" class="svc-card__link">→ Запитване</a>
+          </div>
+          <div class="svc-card reveal" style="transition-delay:0.25s">
+            <div class="svc-card__icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#FF5C1A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+            </div>
+            <div class="svc-card__title">Мотокари и ПСМ</div>
+            <div class="svc-card__desc">Обучение за управление на мотокари, кранове и подемно-строителни машини.</div>
+            <a href="#contact" class="svc-card__link">→ Запитване</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 7 — HOW IT WORKS
+    ============================================================ -->
+    <section class="process" id="process" aria-label="Как работи">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Как работи?</h2>
+          <p class="section-subtitle">Три стъпки до шофьорска книжка.</p>
+        </div>
+        <div class="process__steps">
+          <div class="process__step reveal">
+            <div class="process__num">1</div>
+            <div class="process__title">Запиши се онлайн</div>
+            <div class="process__desc">Попълни формата тук или се обади. Избери категория и удобен график — бързо и лесно.</div>
+          </div>
+          <div class="process__connector"></div>
+          <div class="process__step reveal" style="transition-delay:0.15s">
+            <div class="process__num">2</div>
+            <div class="process__title">Премини обучението</div>
+            <div class="process__desc">Теоретични занятия и практически уроци с опитен инструктор по твой график.</div>
+          </div>
+          <div class="process__connector"></div>
+          <div class="process__step reveal" style="transition-delay:0.3s">
+            <div class="process__num">3</div>
+            <div class="process__title">Вземи книжката</div>
+            <div class="process__desc">Положи успешно изпита и тръгни на пътя с увереност. Ние ще бъдем с теб до края!</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 8 — TESTIMONIALS
+    ============================================================ -->
+    <section class="testimonials" id="testimonials" aria-label="Отзиви">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Какво казват нашите курсисти</h2>
+          <p class="section-subtitle">Реални отзиви от проверени курсисти в Google.</p>
+        </div>
+        <div class="testimonials__slider" aria-label="Слайдер с отзиви">
+          <div class="testimonials__track" id="testiTrack">
+
+            <div class="testi-card">
+              <div class="testi-item reveal">
+                <div class="testi-item__stars">★★★★★</div>
+                <div class="testi-item__quote">"Взех изпита от първия опит! Инструкторът беше невероятно търпелив и ясен. Никога не се чувствах под натиск. Само препоръки!"</div>
+                <div class="testi-item__author">
+                  <div class="testi-item__avatar">М</div>
+                  <div>
+                    <div class="testi-item__name">Мария Стоянова</div>
+                    <div class="testi-item__badge">— Проверен курсист в Google</div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-item reveal" style="transition-delay:0.1s">
+                <div class="testi-item__stars">★★★★★</div>
+                <div class="testi-item__quote">"Онлайн записването е супер удобно. За 2 минути имах насрочен час. Гъвкавият график ме спаси — уча и работя едновременно."</div>
+                <div class="testi-item__author">
+                  <div class="testi-item__avatar">И</div>
+                  <div>
+                    <div class="testi-item__name">Иван Петров</div>
+                    <div class="testi-item__badge">— Проверен курсист в Google</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="testi-card">
+              <div class="testi-item">
+                <div class="testi-item__stars">★★★★★</div>
+                <div class="testi-item__quote">"Препоръчвам на всички! Страхотно отношение и модерни коли. Чувствах се в безопасност от първия урок. Благодаря на целия екип!"</div>
+                <div class="testi-item__author">
+                  <div class="testi-item__avatar">Е</div>
+                  <div>
+                    <div class="testi-item__name">Елена Димитрова</div>
+                    <div class="testi-item__badge">— Проверен курсист в Google</div>
+                  </div>
+                </div>
+              </div>
+              <div class="testi-item">
+                <div class="testi-item__stars">★★★★★</div>
+                <div class="testi-item__quote">"Гъвкавият график ми помогна да се уча дори с натоварена работа. Теорията беше ясна, практиката — отлична. 10/10!"</div>
+                <div class="testi-item__author">
+                  <div class="testi-item__avatar">Г</div>
+                  <div>
+                    <div class="testi-item__name">Георги Николов</div>
+                    <div class="testi-item__badge">— Проверен курсист в Google</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="testimonials__controls" aria-label="Контроли на слайдера">
+          <button class="testi-btn" id="testiPrev" aria-label="Предишен отзив">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="testi-dots" id="testiDots" role="tablist">
+            <div class="testi-dot active" data-idx="0" role="tab" aria-label="Слайд 1" tabindex="0"></div>
+            <div class="testi-dot" data-idx="1" role="tab" aria-label="Слайд 2" tabindex="0"></div>
+          </div>
+          <button class="testi-btn" id="testiNext" aria-label="Следващ отзив">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 9 — GALLERY
+         Images are injected by scripts/main.ts from scripts/config.ts.
+         To add/remove/swap photos, edit the `gallery` array in config.ts.
+    ============================================================ -->
+    <section class="gallery" id="gallery" aria-label="Галерия">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Нашите моменти</h2>
+          <p class="section-subtitle">Снимки от обучения, изпити и ежедневието в школата.</p>
+        </div>
+        <!-- populated by main.ts -->
+        <div class="gallery__grid"></div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CATEGORY MODAL
+    ============================================================ -->
+    <div id="catModal" role="dialog" aria-modal="true" aria-labelledby="catModalTitle">
+      <div class="cat-modal-overlay" id="catModalOverlay"></div>
+      <div class="cat-modal-panel">
+
+        <!-- Gallery: vehicle images (populated by JS) -->
+        <div class="cat-modal-gallery">
+          <div class="cat-modal-gallery-track" id="catModalGalleryTrack"></div>
+          <button class="cat-modal-gallery-btn cat-modal-gallery-btn--prev" id="catModalPrev" aria-label="Предишна снимка">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+          </button>
+          <button class="cat-modal-gallery-btn cat-modal-gallery-btn--next" id="catModalNext" aria-label="Следваща снимка">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+          </button>
+          <div class="cat-modal-gallery-dots" id="catModalDots"></div>
+          <div id="catModalBadge" class="cat-modal-badge"></div>
+        </div>
+
+        <!-- Scrollable content -->
+        <div class="cat-modal-content">
+          <button class="cat-modal-close" id="catModalClose" aria-label="Затвори">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+          </button>
+
+          <div>
+            <h2 id="catModalTitle" class="cat-modal-title"></h2>
+            <p id="catModalSubtitle" class="cat-modal-subtitle"></p>
+          </div>
+
+          <p id="catModalDesc" class="cat-modal-desc"></p>
+
+          <!-- Specs: age / theory / practice / exam -->
+          <div id="catModalSpecs" class="cat-modal-specs"></div>
+
+          <!-- Requirements -->
+          <div>
+            <div class="cat-modal-reqs-header">Изисквания</div>
+            <ul id="catModalReqs" class="cat-modal-reqs"></ul>
+          </div>
+
+          <!-- What's included -->
+          <div>
+            <div class="cat-modal-includes-header">Курсът включва</div>
+            <ul id="catModalIncludes" class="cat-modal-includes"></ul>
+          </div>
+
+          <!-- Price + CTA -->
+          <div class="cat-modal-footer">
+            <div>
+              <div class="cat-modal-price-label">Цена</div>
+              <div id="catModalPrice" class="cat-modal-price-value"></div>
+              <div id="catModalPriceNote" class="cat-modal-price-note"></div>
+            </div>
+            <a href="#contact" class="btn btn-primary" id="catModalCta">ЗАПИШИ СЕ</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Преглед на снимка">
+      <button class="lightbox__close" id="lightboxClose" aria-label="Затвори">×</button>
+      <img id="lightboxImg" src="" alt="Преглед на снимка">
+    </div>
+
+    <!-- ============================================================
+         SECTION 10 — CTA BANNER
+    ============================================================ -->
+    <section class="cta-banner" aria-label="Запиши се">
+      <div class="container">
+        <h2 class="cta-banner__title reveal-title">Готов ли си да тръгнеш?</h2>
+        <p class="cta-banner__subtitle reveal">Записвай се онлайн — бързо, лесно, без чакане на опашка.</p>
+        <div class="reveal" style="transition-delay:0.1s">
+          <a href="#contact" class="btn btn-white" style="font-size:16px;padding:18px 40px;margin-top:8px;">ЗАПИШИ СЕ СЕГА</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SECTION 11 — CONTACT + OFFICES
+    ============================================================ -->
+    <section class="contact" id="contact" aria-label="Контакти">
+      <div class="container">
+        <div class="section-header reveal-title">
+          <h2 class="section-title">Намери ни</h2>
+          <p class="section-subtitle">Намерете ни лесно в Русе.</p>
+        </div>
+
+        <div class="contact__grid">
+          <div style="display:flex;flex-direction:column;gap:20px;">
+            <div class="office-card reveal">
+              <div class="office-card__title">Нашият офис</div>
+              <div class="office-card__row">
+                <span class="office-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <span>бул. „Цар Освободител" 31, офис 1<br>блок Румяна, Ялта, 7000 Русе</span>
+              </div>
+              <div class="office-card__row">
+                <span class="office-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.17 3.26 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+                </span>
+                <a href="tel:+359887572659">0887 572 659</a>
+              </div>
+              <div class="office-card__row">
+                <span class="office-card__icon">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                <span>Пон–Пет: 09:00–17:00 | Сб–Нед: Затворено</span>
+              </div>
+              <a href="https://maps.app.goo.gl/U3SvBBQkFrSqgRzR8" target="_blank" rel="noopener" class="office-card__map-btn">Виж на картата →</a>
+            </div>
+          </div>
+
+          <div class="map-placeholder reveal" style="transition-delay:0.15s;padding:0;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2979.381293082884!2d25.958887612664093!3d43.84880794043608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40ae60c85604d399%3A0xf37a5f093fe2fbf6!2z0JDQstGC0L7RiNC60L7Qu9CwINCh0LDQstCw0LrQvtCyIC0g0KjQvtGE0YzQvtGA0YHQutC4INC60YPRgNGB0L7QstC1!5e0!3m2!1sbg!2sbg!4v1782559794675!5m2!1sbg!2sbg" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+        </div>
+
+        <div class="contact-form reveal">
+          <div class="contact-form__title">Изпратете запитване</div>
+          <div class="contact-form__subtitle">Ще ви отговорим в рамките на 24 часа в работни дни.</div>
+          <form novalidate>
+            <div class="form-grid">
+              <div class="form-group">
+                <label for="name">Вашето Имe *</label>
+                <input type="text" id="name" name="name" placeholder="Иван Иванов" required autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="phone">Телефон</label>
+                <input type="tel" id="phone" name="phone" placeholder="+359 XXX XXX XXX" autocomplete="tel">
+              </div>
+              <div class="form-group">
+                <label for="email">Имейл</label>
+                <input type="email" id="email" name="email" placeholder="ivan@example.com" autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="category">Категория</label>
+                <select id="category" name="category">
+                  <option value="">— Изберете категория —</option>
+                  <option>Категория А / А1 / А2</option>
+                  <option>Категория B</option>
+                  <option>Категория B78 (Автоматик)</option>
+                  <option>Категория BE</option>
+                  <option>Категория C</option>
+                  <option>Категория CE</option>
+                  <option>Категория D</option>
+                  <option>Категория D1</option>
+                  <option>Възстановяване на точки</option>
+                  <option>Проф. компетентност</option>
+                  <option>Опреснителни часове</option>
+                  <option>АДР</option>
+                  <option>Мотокари / ПСМ</option>
+                </select>
+              </div>
+              <div class="form-group full">
+                <label for="message">Съобщение</label>
+                <textarea id="message" name="message" placeholder="Напишете вашето запитване тук..."></textarea>
+              </div>
+            </div>
+            <div class="form-submit">
+              <button type="submit" class="btn btn-primary">ИЗПРАТЕТЕ ЗАПИТВАНЕ</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================================
+       SECTION 12 — FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <div class="footer__logo">АВТОШКОЛА <span>САВАКОВ</span></div>
+          <div class="footer__tagline">Шофирай с увереност.</div>
+          <div class="footer__socials">
+            <a href="#" class="footer__social" aria-label="Facebook">
+              <svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="#" class="footer__social" aria-label="Instagram">
+              <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Курсове</div>
+          <div class="footer__links">
+            <a href="#categories">Категория А / А1 / А2</a>
+            <a href="#categories">Категория B</a>
+            <a href="#categories">Категория B78</a>
+            <a href="#categories">Категория BE</a>
+            <a href="#categories">Категория C</a>
+            <a href="#categories">Категория CE</a>
+            <a href="#categories">Категория D</a>
+            <a href="#categories">Категория D1</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Услуги</div>
+          <div class="footer__links">
+            <a href="#services">Проф. компетентност</a>
+            <a href="#services">Възстановяване на точки</a>
+            <a href="#services">Опреснителни часове</a>
+            <a href="#services">АДР — Опасни товари</a>
+            <a href="#services">Мотокари / ПСМ</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer__col-title">Контакти</div>
+          <div class="footer__contact-row">
+            <span class="ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+            </span>
+            бул. „Цар Освободител" 31, офис 1, 7000 Русе
+          </div>
+          <div class="footer__contact-row">
+            <span class="ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.36 12 19.79 19.79 0 0 1 1.17 3.26 2 2 0 0 1 3.12 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21 16v.92z"/></svg>
+            </span>
+            <a href="tel:+359887572659">0887 572 659</a>
+          </div>
+          <div class="footer__contact-row">
+            <span class="ico">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </span>
+            Пон–Пет: 09:00–17:00<br>Сб–Нед: Затворено
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2025 Автошкола Саваков. Всички права запазени.</div>
+        <div class="footer__legal">
+          <a href="#">Политика за поверителност</a>
+          <a href="#">Бисквитки</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    import '../scripts/main';
+  </script>
+
+</body>
+</html>
